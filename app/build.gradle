@@ -43,4 +43,6 @@ dependencies {
     //firebase auth
     implementation 'com.google.firebase:firebase-auth'
 
+    //firebase db
+    implementation 'com.google.firebase:firebase-database'
 }

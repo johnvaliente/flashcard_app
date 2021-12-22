@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
@@ -27,6 +29,9 @@ public class SignUp extends AppCompatActivity{
     Button bRegister;
 
     FirebaseAuth mAuth;
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +53,6 @@ public class SignUp extends AppCompatActivity{
         });
     }
 
-
     public void createUser(){
 
         String userFName = fName.getText().toString();
@@ -69,6 +73,14 @@ public class SignUp extends AppCompatActivity{
 
                     if(task.isSuccessful()){
                         Toast.makeText(SignUp.this, "User is registered successfully", Toast.LENGTH_LONG).show();
+
+                        rootNode = FirebaseDatabase.getInstance();
+                        reference = rootNode.getReference();
+
+                        User user = new User(userFName,userLName,userEmail,userPass);
+
+                        reference.child(email).setValue(user);
+
                         startActivity(new Intent(SignUp.this, Login.class));
                     }else{
                         Toast.makeText(SignUp.this, "User was not registered successfully" + task.getException().getMessage(), Toast.LENGTH_LONG).show();

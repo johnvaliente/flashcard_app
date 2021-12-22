@@ -10,8 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -30,7 +28,7 @@
             android:layout_marginLeft="150dp"
             android:layout_gravity="center"
             android:clickable="true"
-            android:text="Create a New Account"
+            android:text="Create a New Deck"
             android:textAllCaps="false"
             android:textColor="#087726"
             android:textSize="18sp"
@@ -40,16 +38,26 @@
 
         </Button>
 
-
-
-
     </LinearLayout>
 
+     <TextView
+        android:id="@+id/decks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decks"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="#087726"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="78dp" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp">
+         <ListView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="80dp">
+         </ListView>
 
-    </ListView>
+
 </LinearLayout>
