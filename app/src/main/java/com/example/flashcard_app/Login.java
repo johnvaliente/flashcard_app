@@ -44,9 +44,6 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
             loginUser();
         });
 
-
-
-
     }
 
     private void loginUser(){

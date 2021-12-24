@@ -20,6 +20,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
+import java.util.concurrent.ThreadLocalRandom;
+
+//info on structuring db on firebase
+//https://firebase.google.com/docs/database/admin/structure-data
+
 public class SignUp extends AppCompatActivity{
 
     TextView fName;
@@ -59,6 +64,7 @@ public class SignUp extends AppCompatActivity{
         String userLName = lName.getText().toString();
         String userEmail = email.getText().toString();
         String userPass = password.getText().toString();
+        String userId = randomId();
 
         if(TextUtils.isEmpty(userEmail)){
             email.setError("Email cannot be empty");
@@ -75,11 +81,11 @@ public class SignUp extends AppCompatActivity{
                         Toast.makeText(SignUp.this, "User is registered successfully", Toast.LENGTH_LONG).show();
 
                         rootNode = FirebaseDatabase.getInstance();
-                        reference = rootNode.getReference();
+                        reference = rootNode.getReference("users");
 
-                        User user = new User(userFName,userLName,userEmail,userPass);
+                        User user = new User(userFName,userLName,userEmail,userPass,userId);
 
-                        reference.child(email).setValue(user);
+                        reference.child(userId).setValue(user);
 
                         startActivity(new Intent(SignUp.this, Login.class));
                     }else{
@@ -89,8 +95,18 @@ public class SignUp extends AppCompatActivity{
                 }
             });
         }
+    }
 
+    /**
+     * Using a thread local random to generate a random 5 user id
+     * thread local random is beneficial for multi threaded environment
+     * @return
+     */
+    public String randomId(){
+        int randomId = ThreadLocalRandom.current().nextInt(11111, 99999 +1);
 
+        String parseInt = Integer.toString(randomId);
 
+        return parseInt;
     }
 }

@@ -6,15 +6,25 @@ public class User {
     String lName;
     String email;
     String pass;
+    String id;
 
     public User(){}
 
-    public User(String fName, String lName, String email,String pass){
+    public User(String fName, String lName, String email,String pass, String id){
 
         this.email = email;
         this.fName = fName;
         this.lName = lName;
         this.pass = pass;
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getfName() {
