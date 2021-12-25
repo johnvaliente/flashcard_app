@@ -1,5 +1,6 @@
 package com.example.flashcard_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,10 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
     LinearLayout linearLayout;
     Button buttonAdd;
+    EditText etDeckName;
 
+
+    String userId;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,11 +27,22 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
         setContentView(R.layout.activity_newdeck);
         //findViewById(R.id.newDeck).setOnClickListener(this);
 
+        etDeckName = findViewById(R.id.deckName);
+
+        //for dynamic changes
         linearLayout = findViewById(R.id.layout);
         buttonAdd = findViewById(R.id.more);
 
-
         buttonAdd.setOnClickListener(this);
+
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        if(bundle !=null){
+            userId = (String) bundle.getSerializable("userId");
+
+        }
 
     }
 

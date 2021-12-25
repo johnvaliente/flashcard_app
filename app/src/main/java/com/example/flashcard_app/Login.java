@@ -18,6 +18,11 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity implements  View.OnClickListener{
     public FirebaseAuth mAuth;
@@ -25,6 +30,9 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
     EditText loginEmail;
     EditText loginPass;
     Button buttonLogin;
+
+    //retrieving db
+    DatabaseReference reference;
 
 
     @Override
@@ -63,7 +71,42 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(Login.this, "User logged in successfully", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(Login.this, Menu.class));
+
+                        reference = FirebaseDatabase.getInstance().getReference().child("users");
+
+
+                        reference.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                for(DataSnapshot ds : snapshot.getChildren()){
+                                    //refers to the table/reference "users" as an object
+                                    User user = ds.getValue(User.class);
+
+                                    if(userEmail.equals(user.getEmail())){
+                                        //getID and pass it into menu class
+                                        String userId = user.getId();
+
+                                        Bundle bundle = new Bundle();
+                                        Intent intent = new Intent(Login.this,Menu.class);
+
+                                        bundle.putString("userId", userId);
+                                        intent.putExtras(bundle);
+                                        startActivity(intent);
+
+                                    }
+
+
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
+
+
                     }else{
                         Toast.makeText(Login.this, "Wrong user information " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
