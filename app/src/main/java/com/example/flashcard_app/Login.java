@@ -80,19 +80,26 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 for(DataSnapshot ds : snapshot.getChildren()){
                                     //refers to the table/reference "users" as an object
-                                    User user = ds.getValue(User.class);
+                                    //User user = ds.getValue(User.class);
 
-                                    if(userEmail.equals(user.getEmail())){
+                                    String uEmail = (String)ds.child("email").getValue();
+
+
+                                    if(userEmail.equals(uEmail)){
                                         //getID and pass it into menu class
-                                        String userId = user.getId();
+                                       // String userId = user.getId();
+                                        String uId = (String)ds.child("id").getValue();
 
                                         Bundle bundle = new Bundle();
                                         Intent intent = new Intent(Login.this,Menu.class);
 
-                                        bundle.putString("userId", userId);
+                                        bundle.putString("userId", uId);
                                         intent.putExtras(bundle);
                                         startActivity(intent);
 
+                                    }
+                                    else{
+                                        //account not registered
                                     }
 
 

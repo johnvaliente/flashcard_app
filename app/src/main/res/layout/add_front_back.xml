@@ -15,7 +15,7 @@
                 android:id="@+id/front"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="front:"
+                android:hint="front:"
                 android:textSize="20dp"
                 >
             </EditText>
@@ -24,7 +24,7 @@
                 android:id="@+id/back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="back:"
+                android:hint="back:"
                 android:textSize="20dp"
                 >
             </EditText>
