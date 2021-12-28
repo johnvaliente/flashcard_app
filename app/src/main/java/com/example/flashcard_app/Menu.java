@@ -9,7 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
-
+    /**
+     * need a method that iterates through the deck, counts how many cards are in each deck, and adds it on a arraylist.
+     * Then arraylist will be passed
+     * off to an adapter (customized adapter)
+     *
+     * note: need to create code for multple decks as well.
+     */
     String userId;
 
     @Override

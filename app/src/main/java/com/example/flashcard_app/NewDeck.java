@@ -35,13 +35,8 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
     Button buttonSubmit;
     EditText etDeckName;
 
-
-    EditText etFrontNew;
-    EditText etBackNew;
-
     String deckNameString;
-    String frontNewString;
-    String backNewString;
+
 
     String userId;
     String count;
@@ -56,9 +51,6 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
         //findViewById(R.id.newDeck).setOnClickListener(this);
 
         etDeckName = (EditText) findViewById(R.id.deckName);
-//        etFrontNew = (EditText)findViewById(R.id.frontNew);
-//        etBackNew = (EditText) findViewById(R.id.backNew);
-
 
         //for dynamic changes
         linearLayout = findViewById(R.id.layout);
@@ -111,20 +103,18 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
         EditText etBack = (EditText) deckView.findViewById(R.id.back);
 
 
-
         buttonSubmit.setOnClickListener(view-> {
 
             DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference().child("decks").child(userId);
             rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    int cardNum;
+
                     //if what is deck already exist
                     if(snapshot.hasChild(deckNameString)){
 
                         String etFrontStr = etFront.getText().toString();
                         String etBackStr = etBack.getText().toString();
-
 
                         //create a "new deck" with existing deck name
                         Deck updateDeck = new Deck(etFrontStr,etBackStr,deckNameString);
@@ -136,12 +126,7 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
                         //convert from et to string
                         String etFrontStr = etFront.getText().toString();
                         String etBackStr = etBack.getText().toString();
-                        count = "0";
 
-                        HashMap<String, Object> mapNewCard = new HashMap<>();
-                        mapNewCard.put(deckNameString, new Deck(etFrontStr,etBackStr,count));
-
-                        //DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("decks").child(userId).child(deckNameString);
 
                         //reference to new deck name
                         DatabaseReference dbRef = rootRef.child(deckNameString);
@@ -149,7 +134,6 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
                         Deck newDeck = new Deck(etFrontStr,etBackStr,deckNameString);
 
-                       // FirebaseDatabase.getInstance().getReference().child("decks").child(userId).child(deckNameString).push()..setValue(mapNewCard);
 
                         //creates an attribute under the specific key
                         dbRef.child(key).setValue(newDeck);
