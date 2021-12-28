@@ -10,7 +10,7 @@ public class Deck {
     public Deck() {
     }
 
-    public Deck(String front, String back, String count) {
+    public Deck(String front, String back, String deckName) {
         this.front = front;
         this.back = back;
         this.deckName = deckName;
