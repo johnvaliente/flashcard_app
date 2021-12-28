@@ -14,7 +14,6 @@ public class Deck {
         this.front = front;
         this.back = back;
         this.deckName = deckName;
-        this.count = count;
     }
 
     public String getFront() {
