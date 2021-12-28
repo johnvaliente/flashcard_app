@@ -101,8 +101,6 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
                                     else{
                                         //account not registered
                                     }
-
-
                                 }
                             }
 

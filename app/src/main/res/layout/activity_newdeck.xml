@@ -30,23 +30,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <EditText
-                android:id="@+id/frontNew"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="front:"
-                android:textSize="20dp"
-                >
-            </EditText>
+<!--            <EditText-->
+<!--                android:id="@+id/frontNew"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="front:"-->
+<!--                android:textSize="20dp"-->
+<!--                >-->
+<!--            </EditText>-->
 
-            <EditText
-                android:id="@+id/backNew"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="back:"
-                android:textSize="20dp"
-                >
-            </EditText>
+<!--            <EditText-->
+<!--                android:id="@+id/backNew"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="back:"-->
+<!--                android:textSize="20dp"-->
+<!--                >-->
+<!--            </EditText>-->
         </LinearLayout>
 
 
@@ -57,7 +57,7 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/white"
             android:clickable="true"
-            android:text="Add more"
+            android:text="Add Cards"
             android:textAllCaps="false"
             android:textColor="#087726"
             android:textSize="18sp"
@@ -67,19 +67,19 @@
 
         </Button>
 
-        <Button
-            android:id="@+id/submit1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="true"
-            android:text="Submit"
-            android:textAllCaps="false"
-            android:textColor="#087726"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/white"
-            >
-        </Button>
+<!--        <Button-->
+<!--            android:id="@+id/submit1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:clickable="true"-->
+<!--            android:text="Submit"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="#087726"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            >-->
+<!--        </Button>-->
 
 </LinearLayout>

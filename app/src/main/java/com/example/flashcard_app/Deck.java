@@ -5,17 +5,16 @@ public class Deck {
     public String front;
     public String back;
     public String deckName;
-    public String userId;
+    public String count;
 
     public Deck() {
-
     }
 
-    public Deck(String front, String back, String deckName, String userId) {
+    public Deck(String front, String back, String count) {
         this.front = front;
         this.back = back;
         this.deckName = deckName;
-        this.userId = userId;
+        this.count = count;
     }
 
     public String getFront() {
@@ -42,11 +41,11 @@ public class Deck {
         this.deckName = deckName;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getCount() {
+        return count;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setCount(String userId) {
+        this.count = userId;
     }
 }
