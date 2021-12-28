@@ -24,6 +24,12 @@ import java.util.HashMap;
 
 public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
+    //resources:
+    //https://firebase.google.com/docs/firestore/manage-data/add-data#update_elements_in_an_array
+    //https://stackoverflow.com/questions/50068510/how-to-append-data-in-firebase
+    //https://firebase.google.com/docs/database/admin/save-data
+    //https://stackoverflow.com/questions/37397205/google-firebase-check-if-child-exists
+
     LinearLayout linearLayout;
     Button buttonAdd;
     Button buttonSubmit;
@@ -113,27 +119,16 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     int cardNum;
+                    //if what is deck already exist
                     if(snapshot.hasChild(deckNameString)){
-                        count = (String) snapshot.child(deckNameString).child("count").getValue();
-                        cardNum = Integer.valueOf(count) + 1;
-                        count = String.valueOf(cardNum);
 
                         String etFrontStr = etFront.getText().toString();
                         String etBackStr = etBack.getText().toString();
 
-                        HashMap<String, Object> mapUpDeck = new HashMap<>();
-                        mapUpDeck.put(deckNameString, new Deck(etFrontStr,etBackStr,count));
 
-                       // FirebaseDatabase.getInstance().getReference().child("decks").child(userId).setValue(mapUpDeck);
-
-                        //rootRef.setValue(mapUpDeck);
-                        rootRef.child(deckNameString).push().setValue(mapUpDeck);
-
-                        //resources:
-                        //https://firebase.google.com/docs/firestore/manage-data/add-data#update_elements_in_an_array
-                        //https://stackoverflow.com/questions/50068510/how-to-append-data-in-firebase
-                        //https://firebase.google.com/docs/database/admin/save-data
-                        //https://stackoverflow.com/questions/37397205/google-firebase-check-if-child-exists
+                        //create a "new deck" with existing deck name
+                        Deck updateDeck = new Deck(etFrontStr,etBackStr,deckNameString);
+                        rootRef.child(deckNameString).push().setValue(updateDeck);
 
                     }
                     else{
@@ -146,7 +141,10 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
                         HashMap<String, Object> mapNewCard = new HashMap<>();
                         mapNewCard.put(deckNameString, new Deck(etFrontStr,etBackStr,count));
 
-                        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("decks").child(userId).child(deckNameString);
+                        //DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("decks").child(userId).child(deckNameString);
+
+                        //reference to new deck name
+                        DatabaseReference dbRef = rootRef.child(deckNameString);
                         String key = dbRef.push().getKey();
 
                         Deck newDeck = new Deck(etFrontStr,etBackStr,deckNameString);
@@ -155,9 +153,6 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
                         //creates an attribute under the specific key
                         dbRef.child(key).setValue(newDeck);
-//                        dbRef.child(key).child("back").setValue(etBackStr);
-//                        dbRef.child(key).child("count").setValue(count);
-
 
                     }
                 }
