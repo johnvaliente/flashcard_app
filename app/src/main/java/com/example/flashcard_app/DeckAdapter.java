@@ -36,7 +36,7 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
      */
 
     public DeckAdapter(Context context, int resource,  ArrayList<Deck> deck) {
-        super(context,0, deck);
+        super(context,0,deck);
         mContext = context;
         mResource = resource;
         this.deck = deck;

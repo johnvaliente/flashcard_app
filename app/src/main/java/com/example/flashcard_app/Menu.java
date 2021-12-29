@@ -32,10 +32,12 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
     String countString;
 
     ArrayList<Deck> deckArrayList = new ArrayList<>();
+    ArrayList<Deck> nameList = new ArrayList<>();
     DatabaseReference reference;
 
     ListView listView;
     Deck deck;
+    String cardNum;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,18 +76,31 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
                                     String keyIn = ds.getKey();
 
-                                    //  String deckName = (String) ds.getValue();
+                                    String deckName = (String) dSnap.child("deckName").getValue();
                                     String fCard = (String) dSnap.child("front").getValue();
                                     String bCard = (String) dSnap.child("back").getValue();
 
                                     Deck d = new Deck(fCard,bCard,key);
                                    // Deck d = dSnap.getValue(Deck.class);
-                                    deckArrayList.add(d);
+                                    if(deckArrayList.isEmpty()){
+                                        deckArrayList.add(d);
+                                        nameList.add(d);
+                                    }
+                                   else{
+                                        for(Deck dk: deckArrayList){
+                                            if(dk.getDeckName().equals(deckName)){
+                                                deckArrayList.add(d);
+                                            }
 
-                                    setListview(deckArrayList);
+                                        }
+                                    }
+
+                                    for(Deck n : nameList){
+                                        n.setCount(countString);
+                                    }
+                                    setListview(nameList);
 
                                 }
-
 
                             }
 
@@ -126,10 +141,10 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
                 deck = (Deck) listView.getItemAtPosition(position);
 
-//                Bundle info = new Bundle();
-//                //putting edited friend in bundle
-//                info.putSerializable("friend", friend);
-//                info.putSerializable("userId", userId);
+                Bundle info = new Bundle();
+                //putting edited friend in bundle
+                info.putSerializable("deck", deckArrayList);
+               // info.putSerializable("userId", userId);
 
 //                Intent save = new Intent(ClosestBday.this, FriendPage.class);
 //                save.putExtras(info);
