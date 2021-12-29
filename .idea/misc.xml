@@ -13,6 +13,9 @@
         <entry key="app/src/main/res/layout/activity_newdeck.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="app/src/main/res/layout/add_front_back.xml" value="0.24537037037037038" />
+        <entry key="app/src/main/res/layout/back_card.xml" value="0.31837606837606836" />
+        <entry key="app/src/main/res/layout/card.xml" value="0.31837606837606836" />
+        <entry key="app/src/main/res/layout/front_card.xml" value="0.30641025641025643" />
       </map>
     </option>
   </component>
