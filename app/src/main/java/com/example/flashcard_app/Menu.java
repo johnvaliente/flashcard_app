@@ -146,9 +146,9 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
                 info.putSerializable("deck", deckArrayList);
                // info.putSerializable("userId", userId);
 
-//                Intent save = new Intent(ClosestBday.this, FriendPage.class);
-//                save.putExtras(info);
-//                startActivity(save);
+                Intent save = new Intent(Menu.this, FrontBack.class);
+                save.putExtras(info);
+                startActivity(save);
 
             }
 

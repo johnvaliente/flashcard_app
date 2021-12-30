@@ -1,6 +1,8 @@
 package com.example.flashcard_app;
 
-public class Deck {
+import java.io.Serializable;
+
+public class Deck implements Serializable {
 
     public String front;
     public String back;
