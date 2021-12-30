@@ -25,7 +25,8 @@
         <activity android:name=".SignUp"></activity>
         <activity android:name=".Menu"></activity>
         <activity android:name=".NewDeck"></activity>
-        <activity android:name=".FrontBack"></activity>
+        <activity android:name=".FrontOfCard"></activity>
+        <activity android:name=".BackOfCard"></activity>
 
     </application>
 

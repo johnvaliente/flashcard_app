@@ -144,7 +144,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
                 info.putSerializable("list", deckArrayList);
                 info.putSerializable("count", countArrayList);
 
-                Intent save = new Intent(Menu.this, FrontBack.class);
+                Intent save = new Intent(Menu.this, FrontOfCard.class);
                 save.putExtras(info);
                 startActivity(save);
 

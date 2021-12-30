@@ -18,21 +18,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class FrontBack extends AppCompatActivity implements View.OnClickListener {
+public class FrontOfCard extends AppCompatActivity implements View.OnClickListener {
 
     ArrayList<Deck> deckAL = new ArrayList<>();
     Button next;
     Button back;
 
-
-    Button frontBC;
-
     TextView tvFront;
-    TextView tvBack;
 
     LinearLayout linearLayout;
-
-
     int count = 0;
 
 
@@ -41,12 +35,12 @@ public class FrontBack extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.front_card);
 
-
         linearLayout = findViewById(R.id.layout);
 
         back = findViewById(R.id.backbtn);
         next = findViewById(R.id.nextbtn);
         tvFront = findViewById(R.id.frontContent);
+       // tvHeader = findViewById(R.id.frontHeader);
 
         back.setOnClickListener(this);
         next.setOnClickListener(this);
@@ -64,8 +58,9 @@ public class FrontBack extends AppCompatActivity implements View.OnClickListener
         if(count < deckAL.size()){
             Deck d = deckAL.get(count);
             tvFront.setText(d.getFront());
+           // tvHeader.setText("Front Card111");
         }else{
-            Toast.makeText(FrontBack.this,"No more cards", Toast.LENGTH_LONG).show();
+            Toast.makeText(FrontOfCard.this,"No more cards", Toast.LENGTH_LONG).show();
         }
 
     }
@@ -73,10 +68,16 @@ public class FrontBack extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.backbtn) {
-            Toast.makeText(FrontBack.this, "inside if", Toast.LENGTH_SHORT).show();
+            Toast.makeText(FrontOfCard.this, "inside if", Toast.LENGTH_SHORT).show();
 
-            backOfCard();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("list", deckAL);
+            bundle.putSerializable("count", count);
 
+            Intent intent = new Intent(FrontOfCard.this, BackOfCard.class);
+
+            intent.putExtras(bundle);
+            startActivity(intent);
 
         } else if (v.getId() == R.id.nextbtn) {
             viewNextCard();
@@ -91,40 +92,10 @@ public class FrontBack extends AppCompatActivity implements View.OnClickListener
         bundle.putSerializable("list", deckAL);
         bundle.putSerializable("count", count);
 
-        Intent intent = new Intent(FrontBack.this, FrontBack.class);
+        Intent intent = new Intent(FrontOfCard.this, FrontOfCard.class);
 
         intent.putExtras(bundle);
         startActivity(intent);
 
-    }
-
-    private void backOfCard() {
-        View deckView = getLayoutInflater().inflate(R.layout.back_card, null, false);
-        tvBack = (TextView) deckView.findViewById(R.id.backContent);
-        frontBC = deckView.findViewById(R.id.frontbtnBC);
-
-        //  i = +1;
-        Toast.makeText(FrontBack.this, "back on click", Toast.LENGTH_SHORT).show();
-
-        Deck d = deckAL.get(count);
-        String test = d.getBack();
-        //count = count+1;
-        tvBack.setText(d.getBack());
-
-
-        frontBC.setOnClickListener(view -> {
-
-
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("list", deckAL);
-            bundle.putSerializable("count", count);
-
-            Intent intent = new Intent(FrontBack.this, FrontBack.class);
-
-            intent.putExtras(bundle);
-            startActivity(intent);
-
-        });
-        linearLayout.addView(deckView);
     }
 }
