@@ -34,7 +34,7 @@
             android:id="@+id/frontContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="front content"
+            android:hint="no new card"
             android:textSize="40dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="80dp"

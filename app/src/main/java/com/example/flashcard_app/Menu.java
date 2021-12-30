@@ -82,24 +82,21 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
                                     Deck d = new Deck(fCard,bCard,key);
                                    // Deck d = dSnap.getValue(Deck.class);
+
                                     if(deckArrayList.isEmpty()){
                                         deckArrayList.add(d);
                                         nameList.add(d);
                                     }
                                    else{
-                                        for(Deck dk: deckArrayList){
-                                            if(dk.getDeckName().equals(deckName)){
-                                                deckArrayList.add(d);
-                                            }
-
-                                        }
+                                        deckArrayList.add(d);
                                     }
 
                                     for(Deck n : nameList){
                                         n.setCount(countString);
                                     }
-                                    setListview(nameList);
 
+                                    int tSize = deckArrayList.size();
+                                    setListview(nameList);
                                 }
 
                             }
@@ -127,10 +124,11 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
     }
 
-    private void setListview(ArrayList<Deck> deckArrayList) {
+    private void setListview(ArrayList<Deck> arrayList) {
 
+        int countArrayList = 0;
         listView = findViewById(R.id.listView);
-        DeckAdapter myAdapter = new DeckAdapter(this,R.layout.activity_deck,deckArrayList);
+        DeckAdapter myAdapter = new DeckAdapter(this,R.layout.activity_deck,arrayList);
 
         listView.setAdapter(myAdapter);
         listView.setClickable(true);
@@ -143,8 +141,8 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
                 Bundle info = new Bundle();
                 //putting edited friend in bundle
-                info.putSerializable("deck", deckArrayList);
-               // info.putSerializable("userId", userId);
+                info.putSerializable("list", deckArrayList);
+                info.putSerializable("count", countArrayList);
 
                 Intent save = new Intent(Menu.this, FrontBack.class);
                 save.putExtras(info);

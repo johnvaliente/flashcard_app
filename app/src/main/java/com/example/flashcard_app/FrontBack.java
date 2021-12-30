@@ -51,12 +51,6 @@ public class FrontBack extends AppCompatActivity implements View.OnClickListener
         back.setOnClickListener(this);
         next.setOnClickListener(this);
 
-        Deck d1 = new Deck("heyFront", "Hey back", "english");
-        Deck d2 = new Deck("heyFront2", "Hey back2", "english");
-
-        deckAL.add(d1);
-        deckAL.add(d2);
-
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
@@ -67,11 +61,12 @@ public class FrontBack extends AppCompatActivity implements View.OnClickListener
 
         }
 
-
-        Deck d = deckAL.get(count);
-        tvFront.setText(d.getFront());
-        int test = count;
-
+        if(count < deckAL.size()){
+            Deck d = deckAL.get(count);
+            tvFront.setText(d.getFront());
+        }else{
+            Toast.makeText(FrontBack.this,"No more cards", Toast.LENGTH_LONG).show();
+        }
 
     }
 
