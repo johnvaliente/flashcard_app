@@ -44,6 +44,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         findViewById(R.id.newDeck).setOnClickListener(this);
+        findViewById(R.id.listDeck).setOnClickListener(this);
 
         //receiving userId bundle
         Intent intent = getIntent();
@@ -54,73 +55,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
         }
 
-        reference = FirebaseDatabase.getInstance().getReference().child("decks").child(userId);
-        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for(DataSnapshot ds : snapshot.getChildren()){
-                    if(ds.hasChildren()){
-
-                       count = ds.getChildrenCount();
-                       countString = Long.toString(count);
-                       String key = ds.getKey();
-
-                        DatabaseReference dbRef = reference.child(key);
-
-                        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                                for(DataSnapshot dSnap : snapshot.getChildren()){
-
-                                    String keyIn = ds.getKey();
-
-                                    String deckName = (String) dSnap.child("deckName").getValue();
-                                    String fCard = (String) dSnap.child("front").getValue();
-                                    String bCard = (String) dSnap.child("back").getValue();
-
-                                    Deck d = new Deck(fCard,bCard,key);
-                                   // Deck d = dSnap.getValue(Deck.class);
-
-                                    if(deckArrayList.isEmpty()){
-                                        deckArrayList.add(d);
-                                        nameList.add(d);
-                                    }
-                                   else{
-                                        deckArrayList.add(d);
-                                    }
-
-                                    for(Deck n : nameList){
-                                        n.setCount(countString);
-                                    }
-
-                                    int tSize = deckArrayList.size();
-                                    setListview(nameList);
-                                }
-
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-
-
-                    }
-                    else{
-                        //no decks
-                    }
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
     }
 
@@ -166,10 +101,15 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             intent.putExtras(bundle);
             startActivity(intent);
         }
+        else if(v.getId() == R.id.listDeck){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(Menu.this,ListDecks.class);
+
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
 
     }
-
-
-
 
 }

@@ -27,6 +27,7 @@
         <activity android:name=".NewDeck"></activity>
         <activity android:name=".FrontOfCard"></activity>
         <activity android:name=".BackOfCard"></activity>
+        <activity android:name=".ListDecks"></activity>
 
     </application>
 

@@ -5,28 +5,64 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView"
+         <TextView
+            android:id="@+id/decks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello!"
+            android:text="Menu"
             android:textSize="30dp"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textColor="#087726"
             tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="78dp" />
+             android:layout_marginTop="180dp">
+
+
+         </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+<!--        <Button-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Hello!"-->
+<!--            android:textSize="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#087726"-->
+<!--            tools:layout_editor_absoluteX="40dp"-->
+<!--            tools:layout_editor_absoluteY="78dp" />-->
+        <Button
+            android:id="@+id/delDeck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:text="Delete Deck"
+            android:textAllCaps="false"
+            android:textColor="#087726"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/white"
+
+            >
+
+        </Button>
 
         <Button
             android:id="@+id/newDeck"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:layout_gravity="center"
             android:clickable="true"
             android:text="Create a New Deck"
@@ -34,32 +70,52 @@
             android:textColor="#087726"
             android:textSize="18sp"
             android:textStyle="bold"
-           android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/listDeck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:text="List Current Decks"
+            android:textAllCaps="false"
+            android:textColor="#087726"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
             >
 
         </Button>
 
     </LinearLayout>
 
-     <TextView
-        android:id="@+id/decks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decks"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textColor="#087726"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="78dp" />
+<!--     <TextView-->
+<!--        android:id="@+id/decks"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Decks"-->
+<!--        android:textSize="30dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="#087726"-->
+<!--        tools:layout_editor_absoluteX="40dp"-->
+<!--        tools:layout_editor_absoluteY="78dp" />-->
 
-         <ListView
-             android:id="@+id/listView"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:layout_marginTop="10dp"
-             android:layout_marginBottom="80dp">
-         </ListView>
+<!--         <ListView-->
+<!--             android:id="@+id/listView"-->
+<!--             android:layout_width="match_parent"-->
+<!--             android:layout_height="match_parent"-->
+<!--             android:layout_marginTop="10dp"-->
+<!--             android:layout_marginBottom="80dp">-->
+<!--         </ListView>-->
 
 
 </LinearLayout>
