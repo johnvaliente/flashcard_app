@@ -77,16 +77,6 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
         if(v.getId() == R.id.more){
             addview();
         }
-//        else if(v.getId() == R.id.submit1){
-//
-//            HashMap<String, Object> map = new HashMap<>();
-//            map.put("deck_name" , deckNameString);
-//            map.put("back" , backNewString);
-//            map.put("front" , frontNewString);
-//            map.put("id" , userId);
-//
-//            FirebaseDatabase.getInstance().getReference().child("decks").child(userId).setValue(map);
-//        }
 
     }
 

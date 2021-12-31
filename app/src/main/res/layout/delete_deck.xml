@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="200dp"
+    android:background="#B1B4B4"
     >
 
     <TextView
@@ -12,7 +12,8 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Delete Deck"
         android:textColor="#087726"
-        android:textSize="40sp">
+        android:textSize="40sp"
+        android:layout_marginTop="200dp">
 
     </TextView>
 

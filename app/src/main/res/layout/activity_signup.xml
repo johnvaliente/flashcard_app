@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#B1B4B4">
     <View
         android:id="@+id/header_view"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@color/white"/>
+        android:background="#B1B4B4"/>
 
     <TextView
         android:layout_marginTop="30dp"
