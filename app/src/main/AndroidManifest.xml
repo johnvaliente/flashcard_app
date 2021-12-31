@@ -28,6 +28,11 @@
         <activity android:name=".FrontOfCard"></activity>
         <activity android:name=".BackOfCard"></activity>
         <activity android:name=".ListDecks"></activity>
+        <activity android:name=".DeleteDeck"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 

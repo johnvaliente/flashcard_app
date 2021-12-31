@@ -46,6 +46,7 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_decks);
         //findViewById(R.id.newDeck).setOnClickListener(this);
+        findViewById(R.id.menu).setOnClickListener(this);
 
         //receiving userId bundle
         Intent intent = getIntent();

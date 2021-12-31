@@ -45,7 +45,8 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
         setContentView(R.layout.activity_menu);
         findViewById(R.id.newDeck).setOnClickListener(this);
         findViewById(R.id.listDeck).setOnClickListener(this);
-        findViewById(R.id.menu).setOnClickListener(this);
+        findViewById(R.id.delDeck).setOnClickListener(this);
+
 
         //receiving userId bundle
         Intent intent = getIntent();
@@ -105,6 +106,14 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
         else if(v.getId() == R.id.listDeck){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(Menu.this,ListDecks.class);
+
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.delDeck){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(Menu.this,DeleteDeck.class);
 
             bundle.putString("userId", userId);
             intent.putExtras(bundle);
