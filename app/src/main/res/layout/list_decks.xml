@@ -2,26 +2,75 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/decks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decks"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textColor="#087726"
-        />
+
+        <TextView
+            android:id="@+id/decks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decks"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#087726"
+            />
 
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="600dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="80dp">
-    </ListView>
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/bottom_navigation"
+               >
+                <Button
+                    android:id="@+id/menu"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:drawableRight="@drawable/ic_action_menu2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+
+                    />
+                 <Button
+                     android:id="@+id/person"
+                     android:layout_height="match_parent"
+                     android:layout_width="180dp"
+                     android:layout_marginLeft="210dp"
+                     android:drawableLeft="@drawable/ic_action_person"
+                     style="@style/Widget.AppCompat.Button.Borderless"
+
+                     />
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </RelativeLayout>
 
 </LinearLayout>

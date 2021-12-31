@@ -6,6 +6,8 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/border.xml" value="0.38958333333333334" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.38958333333333334" />
+        <entry key="app/src/main/res/drawable/ic_menu_background.xml" value="0.3021367521367521" />
+        <entry key="app/src/main/res/drawable/ic_menu_foreground.xml" value="0.3021367521367521" />
         <entry key="app/src/main/res/layout/activity_deck.xml" value="0.38177083333333334" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3734375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
@@ -17,6 +19,8 @@
         <entry key="app/src/main/res/layout/card.xml" value="0.31837606837606836" />
         <entry key="app/src/main/res/layout/front_card.xml" value="0.30641025641025643" />
         <entry key="app/src/main/res/layout/list_decks.xml" value="0.2923076923076923" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_menu.xml" value="0.30085470085470084" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_menu_round.xml" value="0.3021367521367521" />
       </map>
     </option>
   </component>

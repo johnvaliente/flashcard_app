@@ -45,6 +45,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
         setContentView(R.layout.activity_menu);
         findViewById(R.id.newDeck).setOnClickListener(this);
         findViewById(R.id.listDeck).setOnClickListener(this);
+        findViewById(R.id.menu).setOnClickListener(this);
 
         //receiving userId bundle
         Intent intent = getIntent();

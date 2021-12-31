@@ -167,6 +167,15 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
             intent.putExtras(bundle);
             startActivity(intent);
         }
+        else if(v.getId() == R.id.menu){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(ListDecks.this,Menu.class);
+
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
+
+        }
 
     }
 
