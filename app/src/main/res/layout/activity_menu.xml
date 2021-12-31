@@ -96,6 +96,25 @@
 
         </Button>
 
+        <Button
+            android:id="@+id/updateDeck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:text="Update Deck"
+            android:textAllCaps="false"
+            android:textColor="#087726"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            >
+
+        </Button>
+
     </LinearLayout>
 
 <!--     <TextView-->

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -41,6 +42,9 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
     String userId;
     String count;
 
+    TextView tvHeader;
+    String pageTitle = "Create New Deckkkk";
+
 
     DatabaseReference reference;
 
@@ -51,6 +55,7 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
         //findViewById(R.id.newDeck).setOnClickListener(this);
 
         etDeckName = (EditText) findViewById(R.id.deckName);
+        tvHeader = (TextView) findViewById(R.id.header);
 
         //for dynamic changes
         linearLayout = findViewById(R.id.layout);
@@ -63,7 +68,10 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
         if(bundle!=null){
             userId = (String) bundle.getSerializable("userId");
+           pageTitle = (String) bundle.getSerializable("title");
         }
+
+        tvHeader.setText(pageTitle);
 
     }
 

@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ListDecks extends AppCompatActivity implements  View.OnClickListener{
 
@@ -39,7 +40,6 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
 
     ListView listView;
     Deck deck;
-    String cardNum;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -144,6 +144,7 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
 
                 Bundle info = new Bundle();
                 //putting edited friend in bundle
+                Collections.shuffle(deckArrayList);
                 info.putSerializable("list", deckArrayList);
                 info.putSerializable("count", countArrayList);
 

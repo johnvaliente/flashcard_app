@@ -28,16 +28,6 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
      * note: need to create code for multple decks as well.
      */
     String userId;
-    long count = 0;
-    String countString;
-
-    ArrayList<Deck> deckArrayList = new ArrayList<>();
-    ArrayList<Deck> nameList = new ArrayList<>();
-    DatabaseReference reference;
-
-    ListView listView;
-    Deck deck;
-    String cardNum;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,6 +36,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
         findViewById(R.id.newDeck).setOnClickListener(this);
         findViewById(R.id.listDeck).setOnClickListener(this);
         findViewById(R.id.delDeck).setOnClickListener(this);
+        findViewById(R.id.updateDeck).setOnClickListener(this);
 
 
         //receiving userId bundle
@@ -56,38 +47,6 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             userId = (String) bundle.getSerializable("userId");
 
         }
-
-
-
-    }
-
-    private void setListview(ArrayList<Deck> arrayList) {
-
-        int countArrayList = 0;
-        listView = findViewById(R.id.listView);
-        DeckAdapter myAdapter = new DeckAdapter(this,R.layout.activity_deck,arrayList);
-
-        listView.setAdapter(myAdapter);
-        listView.setClickable(true);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-
-                deck = (Deck) listView.getItemAtPosition(position);
-
-                Bundle info = new Bundle();
-                //putting edited friend in bundle
-                info.putSerializable("list", deckArrayList);
-                info.putSerializable("count", countArrayList);
-
-                Intent save = new Intent(Menu.this, FrontOfCard.class);
-                save.putExtras(info);
-                startActivity(save);
-
-            }
-
-        });
 
 
     }
@@ -116,6 +75,15 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             Intent intent = new Intent(Menu.this,DeleteDeck.class);
 
             bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.updateDeck){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(Menu.this,NewDeck.class);
+
+            bundle.putString("userId", userId);
+            bundle.putString("title", "Add Card");
             intent.putExtras(bundle);
             startActivity(intent);
         }
