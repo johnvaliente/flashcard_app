@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class BackOfCard extends AppCompatActivity implements View.OnClickListener {
 
-    TextView back;
+    TextView backHeader;
     TextView backContent;
 
     Button backToFront;
@@ -29,6 +29,7 @@ public class BackOfCard extends AppCompatActivity implements View.OnClickListene
 
         backContent = findViewById(R.id.backContent);
         backToFront = findViewById(R.id.frontbtnBC);
+        backHeader = findViewById(R.id.bHeader);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -42,6 +43,7 @@ public class BackOfCard extends AppCompatActivity implements View.OnClickListene
 
         Deck d = deckAL.get(count);
         backContent.setText(d.getBack());
+        backHeader.setText("Back Card:");
 
         backToFront.setOnClickListener(view -> {
 

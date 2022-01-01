@@ -23,8 +23,10 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
     ArrayList<Deck> deckAL = new ArrayList<>();
     Button next;
     Button back;
+    Button prev;
 
     TextView tvFront;
+    TextView tvHeader;
 
     LinearLayout linearLayout;
     int count = 0;
@@ -39,11 +41,13 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
 
         back = findViewById(R.id.backbtn);
         next = findViewById(R.id.nextbtn);
+        prev = findViewById(R.id.prevBtn);
         tvFront = findViewById(R.id.frontContent);
-       // tvHeader = findViewById(R.id.frontHeader);
+        tvHeader = findViewById(R.id.frontHeader);
 
         back.setOnClickListener(this);
         next.setOnClickListener(this);
+        prev.setOnClickListener(this);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -54,11 +58,10 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
             count = (int) b.getSerializable("count");
 
         }
-
         if(count < deckAL.size()){
             Deck d = deckAL.get(count);
             tvFront.setText(d.getFront());
-           // tvHeader.setText("Front Card111");
+            tvHeader.setText("Front Card");
         }else{
             Toast.makeText(FrontOfCard.this,"No more cards", Toast.LENGTH_LONG).show();
         }
@@ -82,6 +85,30 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
         } else if (v.getId() == R.id.nextbtn) {
             viewNextCard();
         }
+        else if (v.getId() == R.id.prevBtn) {
+            viewPrevCard();
+        }
+
+    }
+
+    private void viewPrevCard() {
+        count = count - 1;
+
+        if(count >= 0){
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("list", deckAL);
+            bundle.putSerializable("count", count);
+
+            Intent intent = new Intent(FrontOfCard.this, FrontOfCard.class);
+
+            intent.putExtras(bundle);
+            startActivity(intent);
+
+        }
+        else{
+            Toast.makeText(FrontOfCard.this,"This is the first card!!!", Toast.LENGTH_LONG).show();
+        }
+
 
     }
 
