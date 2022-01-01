@@ -6,6 +6,18 @@
     android:background="#B1B4B4"
    >
 
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B1B4B4"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#087726"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_action_back"
+
+            />
 
         <TextView
             android:id="@+id/header"

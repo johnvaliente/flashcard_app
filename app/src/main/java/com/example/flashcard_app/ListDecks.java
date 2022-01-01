@@ -36,6 +36,7 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
 
     ArrayList<Deck> deckArrayList = new ArrayList<>();
     ArrayList<Deck> nameList = new ArrayList<>();
+    ArrayList<Deck> chosenDeck = new ArrayList<>();
     DatabaseReference reference;
 
     ListView listView;
@@ -86,22 +87,32 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
                                     Deck d = new Deck(fCard,bCard,key);
                                     // Deck d = dSnap.getValue(Deck.class);
 
-                                    if(deckArrayList.isEmpty()){
-                                        deckArrayList.add(d);
-                                        nameList.add(d);
-                                    }
-                                    else{
-                                        deckArrayList.add(d);
-                                    }
+                                    deckArrayList.add(d);
 
-                                    for(Deck n : nameList){
+
+                                    //each unique deck will be added on to an arraylist
+                                    //if the deck name inside nameList is not inside, add it on to nameList
+
+                                    for(Deck n : deckArrayList){
+
+                                        if(nameList.isEmpty()){
+                                            nameList.add(d);
+                                        }
+                                        for(Deck n2 : nameList){
+
+                                            //if the deckName inside nameList is not the same as
+                                            //the deckName of the deck in deckArrayList, then add it
+                                            //to nameList
+                                            if (!n.getDeckName().equals(n2.getDeckName())){
+                                                nameList.add(d);
+                                            }
+                                        }
+
                                         n.setCount(countString);
-                                    }
 
-                                    int tSize = deckArrayList.size();
+                                    }
                                     setListview(nameList);
                                 }
-
                             }
 
                             @Override
@@ -142,10 +153,21 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
 
                 deck = (Deck) listView.getItemAtPosition(position);
 
+                String t = deck.getDeckName();
+
+                //goes through arraylist and picks the cards based on the particular
+                //arraylist
+                for(Deck d: deckArrayList){
+
+                    if(d.getDeckName().equals(deck.getDeckName())){
+                        chosenDeck.add(d);
+                    }
+                }
+
                 Bundle info = new Bundle();
                 //putting edited friend in bundle
                 Collections.shuffle(deckArrayList);
-                info.putSerializable("list", deckArrayList);
+                info.putSerializable("list", chosenDeck);
                 info.putSerializable("count", countArrayList);
 
                 Intent save = new Intent(ListDecks.this, FrontOfCard.class);

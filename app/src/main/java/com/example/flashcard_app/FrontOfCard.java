@@ -45,6 +45,10 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
         tvFront = findViewById(R.id.frontContent);
         tvHeader = findViewById(R.id.frontHeader);
 
+        findViewById(R.id.menu).setOnClickListener(this);
+        findViewById(R.id.list).setOnClickListener(this);
+        findViewById(R.id.person).setOnClickListener(this);
+
         back.setOnClickListener(this);
         next.setOnClickListener(this);
         prev.setOnClickListener(this);
@@ -87,6 +91,15 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
         }
         else if (v.getId() == R.id.prevBtn) {
             viewPrevCard();
+        }
+        else if(v.getId() == R.id.menu){
+
+        }
+        else if(v.getId() == R.id.list){
+
+        }
+        else if(v.getId() == R.id.home){
+
         }
 
     }

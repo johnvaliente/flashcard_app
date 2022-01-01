@@ -17,6 +17,10 @@ public class BackOfCard extends AppCompatActivity implements View.OnClickListene
     TextView backContent;
 
     Button backToFront;
+    Button home;
+    Button list;
+    Button person;
+
 
     ArrayList<Deck> deckAL = new ArrayList<>();
     int count = 0;
@@ -30,6 +34,12 @@ public class BackOfCard extends AppCompatActivity implements View.OnClickListene
         backContent = findViewById(R.id.backContent);
         backToFront = findViewById(R.id.frontbtnBC);
         backHeader = findViewById(R.id.bHeader);
+
+        findViewById(R.id.menu).setOnClickListener(this);
+        findViewById(R.id.list).setOnClickListener(this);
+        findViewById(R.id.person).setOnClickListener(this);
+
+
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -63,6 +73,16 @@ public class BackOfCard extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+
+        if(v.getId() == R.id.menu){
+
+        }
+        if(v.getId() == R.id.menu){
+
+        }
+        if(v.getId() == R.id.menu){
+
+        }
 
     }
 
