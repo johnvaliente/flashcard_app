@@ -21,18 +21,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="250dp">
 
 
         <TextView
             android:id="@+id/frontContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="no new card"
+            android:hint="no more cards inside the deck"
             android:textSize="40dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="80dp"
+            android:textAlignment="center"
             >
+
+<!--            android:layout_marginTop="30dp"-->
 
         </TextView>
 
@@ -91,19 +92,53 @@
                     android:id="@+id/menu"
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content"
-                    android:drawableRight="@drawable/ic_action_menu2"
+                    android:drawableRight="@drawable/ic_action_home"
                     style="@style/Widget.AppCompat.Button.Borderless"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="home"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="40dp">
+
+                </TextView>
+                <Button
+                    android:id="@+id/list"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:drawableRight="@drawable/ic_action_list"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginLeft="130dp"
+
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="decks"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="180dp">
+
+                </TextView>
                 <Button
                     android:id="@+id/person"
                     android:layout_height="match_parent"
                     android:layout_width="180dp"
-                    android:layout_marginLeft="210dp"
+                    android:layout_marginLeft="280dp"
                     android:drawableLeft="@drawable/ic_action_person"
                     style="@style/Widget.AppCompat.Button.Borderless"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="300dp">
+
+                </TextView>
 
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 
