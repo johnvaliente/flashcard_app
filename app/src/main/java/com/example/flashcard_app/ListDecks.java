@@ -21,8 +21,6 @@ import java.util.Collections;
 
 public class ListDecks extends AppCompatActivity implements  View.OnClickListener{
 
-
-
     /**
      * need a method that iterates through the deck, counts how many cards are in each deck, and adds it on a arraylist.
      * Then arraylist will be passed
@@ -183,15 +181,16 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.newDeck){
-            Bundle bundle = new Bundle();
-            Intent intent = new Intent(ListDecks.this,NewDeck.class);
-
-            bundle.putString("userId", userId);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
-        else if(v.getId() == R.id.menu){
+//        if(v.getId() == R.id.newDeck){
+//            Bundle bundle = new Bundle();
+//            Intent intent = new Intent(ListDecks.this,NewDeck.class);
+//
+//            bundle.putString("userId", userId);
+//            intent.putExtras(bundle);
+//            startActivity(intent);
+//        }
+//        else
+            if(v.getId() == R.id.menu){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(ListDecks.this,Menu.class);
 

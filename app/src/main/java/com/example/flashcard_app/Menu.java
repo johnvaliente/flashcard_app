@@ -33,10 +33,10 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        findViewById(R.id.newDeck).setOnClickListener(this);
-        findViewById(R.id.listDeck).setOnClickListener(this);
-        findViewById(R.id.delDeck).setOnClickListener(this);
-        findViewById(R.id.updateDeck).setOnClickListener(this);
+        findViewById(R.id.imageView5).setOnClickListener(this);
+        findViewById(R.id.add).setOnClickListener(this);
+        findViewById(R.id.delete).setOnClickListener(this);
+        findViewById(R.id.imageView6).setOnClickListener(this);
 
 
         //receiving userId bundle
@@ -54,7 +54,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.newDeck){
+        if(v.getId() == R.id.add){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(Menu.this,NewDeck.class);
 
@@ -62,7 +62,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        else if(v.getId() == R.id.listDeck){
+        else if(v.getId() == R.id.imageView5){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(Menu.this,ListDecks.class);
 
@@ -70,7 +70,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        else if(v.getId() == R.id.delDeck){
+        else if(v.getId() == R.id.delete){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(Menu.this,DeleteDeck.class);
 
@@ -78,7 +78,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        else if(v.getId() == R.id.updateDeck){
+        else if(v.getId() == R.id.imageView6){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(Menu.this,NewDeck.class);
 
