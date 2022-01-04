@@ -31,6 +31,8 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
     LinearLayout linearLayout;
     int count = 0;
 
+    String userId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
         next.setOnClickListener(this);
         prev.setOnClickListener(this);
 
+
+
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
@@ -60,6 +64,7 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
 
             deckAL = (ArrayList<Deck>) b.getSerializable("list");
             count = (int) b.getSerializable("count");
+            userId = (String) b.getSerializable("userId");
 
         }
         if(count < deckAL.size()){
@@ -93,12 +98,23 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
             viewPrevCard();
         }
         else if(v.getId() == R.id.menu){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(FrontOfCard.this,Menu.class);
+
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
 
         }
         else if(v.getId() == R.id.list){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(FrontOfCard.this,ListDecks.class);
 
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
-        else if(v.getId() == R.id.home){
+        else if(v.getId() == R.id.person){
 
         }
 

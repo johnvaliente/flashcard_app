@@ -37,6 +37,11 @@ public class DeleteDeck extends AppCompatActivity implements  View.OnClickListen
 
         d = findViewById(R.id.deleteButton);
 
+        //for bottom nav
+        findViewById(R.id.menu).setOnClickListener(this);
+        findViewById(R.id.list).setOnClickListener(this);
+        findViewById(R.id.person).setOnClickListener(this);
+
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
@@ -79,12 +84,27 @@ public class DeleteDeck extends AppCompatActivity implements  View.OnClickListen
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.deleteButton){
+       if(v.getId() == R.id.menu){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(DeleteDeck.this,Menu.class);
 
-
-
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
 
         }
+        else if(v.getId() == R.id.list){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(DeleteDeck.this,ListDecks.class);
+
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.person){
+
+        }
+
 
     }
 

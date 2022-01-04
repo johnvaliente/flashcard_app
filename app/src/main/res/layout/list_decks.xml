@@ -54,19 +54,58 @@
                     android:id="@+id/menu"
                     android:layout_height="match_parent"
                     android:layout_width="wrap_content"
-                    android:drawableRight="@drawable/ic_action_menu2"
+                    android:drawableRight="@drawable/ic_action_home"
                     style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginBottom="10dp"
 
                     />
-                 <Button
-                     android:id="@+id/person"
-                     android:layout_height="match_parent"
-                     android:layout_width="180dp"
-                     android:layout_marginLeft="210dp"
-                     android:drawableLeft="@drawable/ic_action_person"
-                     style="@style/Widget.AppCompat.Button.Borderless"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="home"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="45dp">
 
-                     />
+                </TextView>
+
+                <Button
+                    android:id="@+id/list"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableRight="@drawable/ic_action_list"
+
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="decks"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="170dp">
+
+                </TextView>
+                <Button
+                    android:id="@+id/person"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="280dp"
+                    android:drawableLeft="@drawable/ic_action_person2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginBottom="10dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="300dp">
+
+                </TextView>
+
 
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 

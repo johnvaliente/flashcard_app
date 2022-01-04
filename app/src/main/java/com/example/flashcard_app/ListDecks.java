@@ -167,6 +167,7 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
                 Collections.shuffle(deckArrayList);
                 info.putSerializable("list", chosenDeck);
                 info.putSerializable("count", countArrayList);
+                info.putSerializable("userId", userId);
 
                 Intent save = new Intent(ListDecks.this, FrontOfCard.class);
                 save.putExtras(info);

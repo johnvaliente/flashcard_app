@@ -57,6 +57,7 @@
             android:hint="no more cards inside the deck"
             android:textSize="40dp"
             android:layout_marginTop="20dp"
+            android:elegantTextHeight="true"
             android:textAlignment="center"
             android:background="@drawable/radius"
             >
@@ -131,6 +132,7 @@
                     android:layout_width="wrap_content"
                     android:drawableRight="@drawable/ic_action_home"
                     style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginBottom="10dp"
 
                     />
                 <TextView
@@ -148,6 +150,7 @@
                     android:drawableRight="@drawable/ic_action_list"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_marginLeft="130dp"
+                    android:layout_marginBottom="15dp"
 
 
                     />
@@ -164,8 +167,9 @@
                     android:layout_height="match_parent"
                     android:layout_width="180dp"
                     android:layout_marginLeft="280dp"
-                    android:drawableLeft="@drawable/ic_action_person"
+                    android:drawableLeft="@drawable/ic_action_person2"
                     style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginBottom="10dp"
 
                     />
                 <TextView
