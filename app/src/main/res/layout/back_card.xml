@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
 
 
     <LinearLayout
@@ -28,8 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="back content"
+            android:background="@drawable/radius"
             android:textSize="40dp"
             android:textAlignment="center"
+            android:layout_marginTop="20dp"
 
 
             >
@@ -38,7 +40,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <Button
@@ -46,10 +48,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                android:backgroundTint="#087726"
+                android:backgroundTint="#C9D6DF"
                 android:text="front"
                 android:textAllCaps="false"
-                android:textColor="@color/black" />
+                android:textColor="#52616B"
+                android:textSize="15dp"/>
 
         </LinearLayout>
 

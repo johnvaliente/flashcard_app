@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
+
     <View
         android:id="@+id/header_view"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#B1B4B4">
+        android:background="#F0F5F9">
 
     </View>
 
@@ -17,11 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:gravity="center_horizontal"
         android:text="Dekz"
-        android:fontFamily="@font/annie_use_your_telescope"
         android:textAlignment="center"
-        android:textColor="#087726"
+        android:textColor="#52616B"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -40,7 +41,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginHorizontal="40dp"
             android:ems="14"
-            android:textColor="#087726"
+            android:textColor="#52616B"
             android:textStyle="bold"
             android:textSize="30sp"
 
@@ -82,10 +83,10 @@
                 android:layout_height="wrap_content"
                 app:colorScheme="light"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="#087726"
+                android:backgroundTint="#C9D6DF"
                 android:text="Submit"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="#52616B"
             />
 
             <Button
@@ -98,7 +99,7 @@
                 android:clickable="true"
                 android:text="Create a New Account"
                 android:textAllCaps="false"
-                android:textColor="#087726"
+                android:textColor="#52616B"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/annie_use_your_telescope"/>

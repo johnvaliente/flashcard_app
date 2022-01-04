@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
 
     <Button
         android:id="@+id/prevBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#B1B4B4"
+        android:backgroundTint="#C9D6DF"
         android:text="previous card"
         android:textAllCaps="false"
-        android:textColor="#087726"
+        android:textColor="#52616B"
         android:layout_marginLeft="10dp"
         android:drawableLeft="@drawable/ic_action_back"
 
@@ -56,7 +56,9 @@
             android:layout_height="wrap_content"
             android:hint="no more cards inside the deck"
             android:textSize="40dp"
+            android:layout_marginTop="20dp"
             android:textAlignment="center"
+            android:background="@drawable/radius"
             >
 
 <!--            android:layout_marginTop="30dp"-->
@@ -66,16 +68,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
             <Button
                 android:id="@+id/backbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#087726"
+                android:backgroundTint="#C9D6DF"
                 android:text="back of current card"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="#52616B"
                 android:layout_marginLeft="20dp"
 
                 />
@@ -84,10 +87,10 @@
                 android:id="@+id/nextbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#087726"
+                android:backgroundTint="#C9D6DF"
                 android:text="go to next card"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="#52616B"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 />

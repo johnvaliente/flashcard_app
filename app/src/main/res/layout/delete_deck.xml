@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B1B4B4"
+    android:background="#F0F5F9"
     >
 
     <TextView
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Delete Deck"
-        android:textColor="#087726"
+        android:textColor="#52616B"
         android:textSize="40sp"
         android:layout_marginTop="200dp">
 
@@ -20,10 +20,10 @@
     <EditText
         android:id="@+id/deckDelete"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:hint="deck name to be deleted:"
-        android:fontFamily="@font/annie_use_your_telescope"
-        android:textSize="30dp"
+        android:background="@drawable/radius"
+        android:textSize="20dp"
         >
     </EditText>
 
@@ -41,15 +41,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#C9D6DF"
         android:clickable="true"
         android:text="Delete"
         android:textAllCaps="false"
-        android:textColor="#087726"
+        android:textColor="#52616B"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/annie_use_your_telescope"
         >
 
     </Button>

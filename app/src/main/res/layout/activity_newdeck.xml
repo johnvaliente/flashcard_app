@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B1B4B4"
+    android:background="#F0F5F9"
    >
 
         <Button
             android:id="@+id/homeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#B1B4B4"
+            android:backgroundTint="#C9D6DF"
             android:text=""
             android:textAllCaps="false"
             android:textColor="#087726"
@@ -24,17 +24,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create New Deck"
-            android:textSize="40dp"
-            android:textColor="#087726"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="50dp"
+            android:textColor="#52616B"
+
             >
         </TextView>
 
         <EditText
             android:id="@+id/deckName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:hint="deck name:"
             android:textSize="20dp"
+           android:background="@drawable/radius"
             >
         </EditText>
 
@@ -53,11 +56,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="#C9D6DF"
             android:clickable="true"
             android:text="Add Cards"
             android:textAllCaps="false"
-            android:textColor="#087726"
+            android:textColor="#52616B"
             android:textSize="18sp"
             android:textStyle="bold"
 

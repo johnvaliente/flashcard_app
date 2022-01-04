@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
+
     <View
         android:id="@+id/header_view"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#B1B4B4"/>
+        android:background="#F0F5F9" />
 
     <TextView
-        android:layout_marginTop="30dp"
-        android:textColor="#087726"
-        android:textSize="40sp"
-        android:textAlignment="center"
-        android:text="Dekz"
-        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal" />
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Dekz"
+        android:textAlignment="center"
+        android:textColor="#52616B"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -35,9 +37,10 @@
             android:text="Sign Up:"
             android:layout_marginHorizontal="40dp"
             android:ems="14"
-            android:textColor="#087726"
+            android:textColor="#52616B"
+            android:fontFamily="@font/annie_use_your_telescope"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="30sp"
 
             ></TextView>
 
@@ -114,9 +117,11 @@
                 android:text="Submit"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#C9D6DF"
                 android:textAllCaps="false"
-                android:textColor="#087726" />
+                android:textColor="#52616B"
+                android:textSize="15dp"
+                />
 
 
         </LinearLayout>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
 
 
 
@@ -15,18 +15,21 @@
             <EditText
                 android:id="@+id/front"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:hint="front:"
                 android:textSize="20dp"
+                android:background="@drawable/radius"
                 >
             </EditText>
 
             <EditText
                 android:id="@+id/back"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
                 android:hint="back:"
                 android:textSize="20dp"
+                android:background="@drawable/radius"
                 >
             </EditText>
 
@@ -38,10 +41,10 @@
                 android:clickable="true"
                 android:text="Submit New Card"
                 android:textAllCaps="false"
-                android:textColor="#087726"
+                android:textColor="#52616B"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#C9D6DF"
                 >
             </Button>
 

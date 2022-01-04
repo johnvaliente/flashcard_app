@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
 
 
     <LinearLayout
@@ -17,47 +17,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="welcome to..."
-            android:textSize="30dp"
-            android:textColor="#087726" />
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="50dp"
+            android:textColor="#52616B" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
+            android:fontFamily="@font/annie_use_your_telescope"
             android:text="Dekz"
             android:textAlignment="center"
-            android:textColor="#087726"
-            android:textSize="40sp"
+            android:textColor="#52616B"
+            android:textSize="60sp"
             android:textStyle="bold" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#087726"
+                android:backgroundTint="#C9D6DF"
                 android:text="login"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:layout_marginLeft="100dp"
+                android:textColor="#52616B"
+                android:textSize="15dp"
+                android:layout_marginLeft="90dp"
                 />
 
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#087726"
+                android:backgroundTint="#C9D6DF"
                 android:text="sign up"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="#52616B"
+                android:textSize="15dp"
                 android:layout_marginLeft="40dp"/>
 
         </LinearLayout>

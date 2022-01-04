@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#B1B4B4">
+    android:background="#F0F5F9">
 
 
         <TextView
@@ -12,10 +12,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Decks"
-            android:textSize="30dp"
+            android:textSize="50dp"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:textColor="#087726"
+            android:textColor="#52616B"
+            android:fontFamily="@font/annie_use_your_telescope"
             />
 
 

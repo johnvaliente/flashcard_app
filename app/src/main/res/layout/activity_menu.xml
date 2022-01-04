@@ -5,6 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F5F9"
   >
 
     <TextView
@@ -14,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/architects_daughter"
         android:text="Menu"
-        android:textColor="#087726"
+        android:textColor="#52616B"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +43,9 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            app:cardElevation="5dp">
+            app:cardBackgroundColor="#52616B"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="15dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -57,7 +60,8 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cherry_cream_soda"
                     android:text="List of Decks"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -74,6 +78,8 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            app:cardBackgroundColor="#52616B"
+            app:cardCornerRadius="15dp"
             app:cardElevation="5dp">
 
             <RelativeLayout
@@ -89,6 +95,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cherry_cream_soda"
                     android:text="Add a Deck"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -121,6 +128,8 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            app:cardBackgroundColor="#52616B"
+            app:cardCornerRadius="15dp"
             app:cardElevation="5dp">
 
             <RelativeLayout
@@ -136,6 +145,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cherry_cream_soda"
                     android:text="Delete Deck"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -153,6 +163,8 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            app:cardBackgroundColor="#52616B"
+            app:cardCornerRadius="15dp"
             app:cardElevation="5dp">
 
             <RelativeLayout
@@ -168,6 +180,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cherry_cream_soda"
                     android:text="Update Deck"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -199,6 +212,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            app:cardBackgroundColor="#52616B"
+            app:cardCornerRadius="15dp"
             app:cardElevation="5dp">
 
             <RelativeLayout
@@ -214,6 +229,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cherry_cream_soda"
                     android:text="User"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <ImageView

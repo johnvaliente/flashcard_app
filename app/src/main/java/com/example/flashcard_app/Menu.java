@@ -26,6 +26,8 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
      * off to an adapter (customized adapter)
      *
      * note: need to create code for multple decks as well.
+     *
+     * https://designs.ai/colors/palette/1425
      */
     String userId;
 
