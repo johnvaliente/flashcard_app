@@ -16,7 +16,7 @@
         android:fontFamily="@font/architects_daughter"
         android:text="Menu"
         android:textColor="#52616B"
-        android:textSize="30dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
@@ -55,16 +55,16 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/imageView5"
+                    android:layout_below="@id/listDecks"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/cherry_cream_soda"
                     android:text="List of Decks"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/listDecks"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:layout_centerHorizontal="true"

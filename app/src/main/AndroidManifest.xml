@@ -29,6 +29,7 @@
         <activity android:name=".BackOfCard"></activity>
         <activity android:name=".ListDecks"></activity>
         <activity android:name=".DeleteDeck"></activity>
+        <activity android:name=".Profile"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

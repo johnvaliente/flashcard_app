@@ -3,20 +3,9 @@ package com.example.flashcard_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
 
 public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
@@ -35,10 +24,11 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        findViewById(R.id.imageView5).setOnClickListener(this);
+        findViewById(R.id.listDecks).setOnClickListener(this);
         findViewById(R.id.add).setOnClickListener(this);
         findViewById(R.id.delete).setOnClickListener(this);
         findViewById(R.id.imageView6).setOnClickListener(this);
+        findViewById(R.id.user).setOnClickListener(this);
 
 
         //receiving userId bundle
@@ -64,7 +54,7 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        else if(v.getId() == R.id.imageView5){
+        else if(v.getId() == R.id.listDecks){
             Bundle bundle = new Bundle();
             Intent intent = new Intent(Menu.this,ListDecks.class);
 
@@ -86,6 +76,14 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
             bundle.putString("userId", userId);
             bundle.putString("title", "Add Card");
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.user){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(Menu.this,Profile.class);
+
+            bundle.putString("userId", userId);
             intent.putExtras(bundle);
             startActivity(intent);
         }
