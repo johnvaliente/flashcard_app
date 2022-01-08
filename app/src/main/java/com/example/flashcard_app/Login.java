@@ -24,6 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * Login Page
+ */
 public class Login extends AppCompatActivity implements  View.OnClickListener{
     public FirebaseAuth mAuth;
 
@@ -84,9 +87,10 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
 
                                     String uEmail = (String)ds.child("email").getValue();
 
-
+                                    //checks if user is in the database
+                                    //sends ID into menu class
                                     if(userEmail.equals(uEmail)){
-                                        //getID and pass it into menu class
+
                                        // String userId = user.getId();
                                         String uId = (String)ds.child("id").getValue();
 
@@ -103,15 +107,11 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
                                     }
                                 }
                             }
-
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
 
                             }
                         });
-
-
-
                     }else{
                         Toast.makeText(Login.this, "Wrong user information " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }

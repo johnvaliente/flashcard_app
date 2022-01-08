@@ -10,11 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Menu extends AppCompatActivity implements  View.OnClickListener{
 
     /**
-     * need a method that iterates through the deck, counts how many cards are in each deck, and adds it on a arraylist.
-     * Then arraylist will be passed
-     * off to an adapter (customized adapter)
-     *
-     * note: need to create code for multple decks as well.
+     * This is the dashboard page where it can take users to desired page.
      *
      * https://designs.ai/colors/palette/1425
      */
@@ -29,7 +25,6 @@ public class Menu extends AppCompatActivity implements  View.OnClickListener{
         findViewById(R.id.delete).setOnClickListener(this);
         findViewById(R.id.imageView6).setOnClickListener(this);
         findViewById(R.id.user).setOnClickListener(this);
-
 
         //receiving userId bundle
         Intent intent = getIntent();

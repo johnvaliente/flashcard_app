@@ -38,21 +38,15 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
     String deckNameString;
 
-
     String userId;
-    String count;
 
     TextView tvHeader;
-    String pageTitle = "Create New Deckkkk";
-
-
-    DatabaseReference reference;
+    String pageTitle = "Create New Deck";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newdeck);
-        //findViewById(R.id.newDeck).setOnClickListener(this);
 
         etDeckName = (EditText) findViewById(R.id.deckName);
         tvHeader = (TextView) findViewById(R.id.header);
@@ -79,8 +73,6 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
     public void onClick(View v) {
 
         deckNameString = etDeckName.getText().toString();
-//        frontNewString = etFrontNew.getText().toString();
-//        backNewString = etBackNew.getText().toString();
 
         if(v.getId() == R.id.more){
             addview();
@@ -88,8 +80,11 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
     }
 
+    /**
+     * This method will displayed when users want to add a front and back of a card.
+     * It is connected to another xml page so that users can add as many cards they want.
+     */
     private void addview() {
-
 
         deckNameString = etDeckName.getText().toString();
 

@@ -25,6 +25,9 @@ import java.util.concurrent.ThreadLocalRandom;
 //info on structuring db on firebase
 //https://firebase.google.com/docs/database/admin/structure-data
 
+/**
+ * Sign Up page for new users
+ */
 public class SignUp extends AppCompatActivity{
 
     TextView fName;
@@ -99,7 +102,7 @@ public class SignUp extends AppCompatActivity{
 
     /**
      * Using a thread local random to generate a random 5 user id
-     * thread local random is beneficial for multi threaded environment
+     *
      * @return
      */
     public String randomId(){
