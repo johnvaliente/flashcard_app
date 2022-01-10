@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F5F9">
+
+    <Button
+        android:id="@+id/prevBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C9D6DF"
+        android:text="previous card"
+        android:textAllCaps="false"
+        android:textColor="#52616B"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/ic_action_back"
+
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="175dp">
+
+
+
+        <TextView
+            android:id="@+id/frontHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="front card:"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            >
+        </TextView>
+
+
+
+
+        <TextView
+            android:id="@+id/frontContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="no more cards inside the deck"
+            android:textSize="40dp"
+            android:layout_marginTop="20dp"
+            android:elegantTextHeight="true"
+            android:textAlignment="center"
+            android:background="@drawable/radius"
+            >
+
+<!--            android:layout_marginTop="30dp"-->
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C9D6DF"
+                android:text="back of current card"
+                android:textAllCaps="false"
+                android:textColor="#52616B"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C9D6DF"
+                android:text="go to next card"
+                android:textAllCaps="false"
+                android:textColor="#52616B"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/bottom_navigation"
+                >
+                <Button
+                    android:id="@+id/menu"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:drawableRight="@drawable/ic_action_home"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginBottom="10dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="home"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="40dp">
+
+                </TextView>
+                <Button
+                    android:id="@+id/list"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:drawableRight="@drawable/ic_action_list"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginBottom="15dp"
+
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="decks"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="180dp">
+
+                </TextView>
+                <Button
+                    android:id="@+id/person"
+                    android:layout_height="match_parent"
+                    android:layout_width="180dp"
+                    android:layout_marginLeft="280dp"
+                    android:drawableLeft="@drawable/ic_action_person2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginBottom="10dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="300dp">
+
+                </TextView>
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

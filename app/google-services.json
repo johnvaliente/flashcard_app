@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1080659289565",
+    "project_id": "decks-522a4",
+    "storage_bucket": "decks-522a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080659289565:android:4d2113bbbb8bca52368234",
+        "android_client_info": {
+          "package_name": "com.example.flashcard_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080659289565-qt9eq59pvr2qpmfiaoaai6c8jcvej5ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwu-I3ot4VMt-yNGQFmok7c2D8oUnDS08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080659289565-qt9eq59pvr2qpmfiaoaai6c8jcvej5ut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F5F9"
+   >
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#C9D6DF"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#087726"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_action_back"
+
+            />
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Deck"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="50dp"
+            android:textColor="#52616B"
+
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/deckName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="deck name:"
+            android:textSize="20dp"
+           android:background="@drawable/radius"
+            >
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#C9D6DF"
+            android:clickable="true"
+            android:text="Add Cards"
+            android:textAllCaps="false"
+            android:textColor="#52616B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            >
+
+        </Button>
+
+
+</LinearLayout>
