@@ -4,7 +4,7 @@ A flashcard android app that allows users to create flashcards to help with memo
 
 This app primarily uses the Firebase API to authenticate users and create, read, update, and delete flashcards using the Realtime Database from Firebase. 
 
-Note: The focus of this project was to be able to work with an API and to gain further knowledge in using it.
+Note: This project focuses on working with an API to gain further knowledge in how to properly use this software.
 
 
 
