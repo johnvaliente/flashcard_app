@@ -14,7 +14,7 @@ Note: The focus of this project was to be able to work with an API and to gain f
 
 </p>
 <p float="left">
- <img src="images/signup.png" width="300">
+ <img src="images/signup.png" width="320">
 <img src="images/Menu.png" width="300">
 </p>
 <p float="left">
