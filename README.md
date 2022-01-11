@@ -15,7 +15,7 @@ Note: The focus of this project was to be able to work with an API and to gain f
 </p>
 <p float="left">
 <img src="images/Menu.png" width="300">
-<img src="images/list_of_decks.png" width="300">
+<img src="images/list_of_decks.png" width="290">
 <img src="images/front_card.png" width="300">
 </p>
 <p float="left">
