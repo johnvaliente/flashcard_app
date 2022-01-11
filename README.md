@@ -1,6 +1,6 @@
 # deck_app
 
-A flashcard android app that allows users to create flashcards to help with memorization. This app promotes active recall as studies suggest that this method improves memorization skill. User must sign up and create an account with Dekz to start creating flashcards. 
+An android app that allows users to create flashcards to help with memorization. This app promotes active recall as studies suggest that this method improves memorization skill. User must sign up and create an account with Dekz to start creating flashcards. 
 
 This app primarily uses the Firebase API to authenticate users and create, read, update, and delete flashcards using the Realtime Database from Firebase. 
 
