@@ -9,7 +9,7 @@ Note: The focus of this project was to be able to work with an API and to gain f
 
 
 <p float="left">
-<img src="images/WelcomePage.png" width="300"> 
+<img src="images/WelcomePage.png" width="290"> 
 <img src="images/login.png" width="280">
 <img src="images/signup.png" width="300">
 </p>
