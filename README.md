@@ -1,4 +1,4 @@
 # deck_app
 
-<img src="images/login.png" width="50">
+<img src="images/login.png" width="100">
 ![](images/login.png)
