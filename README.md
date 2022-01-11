@@ -1,4 +1,9 @@
 # deck_app
+
+A flashcard android app that allows users to create flashcards, decks to help with memorizatin. 
+
+
+
 <p float="left">
 <img src="images/WelcomePage.png" width="300"> 
 <img src="images/login.png" width="300">
