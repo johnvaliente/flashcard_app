@@ -79,7 +79,7 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
 
         //populates the textView with the information retrieved from the getters
         deckName.setText(dName);
-        countDown.setText(cardNum + "cards in your deck");
+        countDown.setText(cardNum + " card in your deck");
 
         return convertView;
     }
