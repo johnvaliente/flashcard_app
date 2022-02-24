@@ -33,6 +33,7 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
     LinearLayout linearLayout;
     Button buttonAdd;
+    Button buttonBack;
     Button buttonSubmit;
     EditText etDeckName;
 
@@ -55,7 +56,10 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
         linearLayout = findViewById(R.id.layout);
         buttonAdd = findViewById(R.id.more);
 
+        buttonBack = findViewById(R.id.homeBtn);
+
         buttonAdd.setOnClickListener(this);
+        buttonBack.setOnClickListener(this);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -74,8 +78,19 @@ public class NewDeck extends AppCompatActivity implements  View.OnClickListener{
 
         deckNameString = etDeckName.getText().toString();
 
-        if(v.getId() == R.id.more){
+        if(v.getId() == R.id.more) {
             addview();
+        }
+        else if(v.getId() == R.id.homeBtn){
+            Bundle bundle = new Bundle();
+            Intent intent = new Intent(NewDeck.this,Menu.class);
+
+            Toast.makeText(NewDeck.this, "Back button clicked", Toast.LENGTH_LONG).show();
+
+            bundle.putString("userId", userId);
+            intent.putExtras(bundle);
+            startActivity(intent);
+
         }
 
     }

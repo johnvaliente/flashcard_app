@@ -69,12 +69,14 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
             loginPass.setError("Password cannot be empty");
             loginPass.requestFocus();
         }else{
+            //access firebase
             mAuth.signInWithEmailAndPassword(userEmail,userPass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(Login.this, "User logged in successfully", Toast.LENGTH_LONG).show();
 
+                        //endpoint for the db
                         reference = FirebaseDatabase.getInstance().getReference().child("users");
 
 
@@ -90,6 +92,7 @@ public class Login extends AppCompatActivity implements  View.OnClickListener{
                                     //checks if user is in the database
                                     //sends ID into menu class
                                     if(userEmail.equals(uEmail)){
+
 
                                        // String userId = user.getId();
                                         String uId = (String)ds.child("id").getValue();

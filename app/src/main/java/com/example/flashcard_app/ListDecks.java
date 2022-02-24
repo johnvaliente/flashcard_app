@@ -61,6 +61,7 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+
                 for(DataSnapshot ds : snapshot.getChildren()){
                     if(ds.hasChildren()){
 
@@ -73,6 +74,8 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
                         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                int i = 0;
+
 
                                 for(DataSnapshot dSnap : snapshot.getChildren()){
 
@@ -87,30 +90,18 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
 
                                     deckArrayList.add(d);
 
-
-                                    //each unique deck will be added on to an arraylist
-                                    //if the deck name inside nameList is not inside, add it on to nameList
-
-                                    for(Deck n : deckArrayList){
-
-                                        if(nameList.isEmpty()){
-                                            nameList.add(d);
-                                        }
-                                        for(Deck n2 : nameList){
-
-                                            //if the deckName inside nameList is not the same as
-                                            //the deckName of the deck in deckArrayList, then add it
-                                            //to nameList
-                                            if (!n.getDeckName().equals(n2.getDeckName())){
-                                                nameList.add(d);
-                                            }
-                                        }
-
-                                        n.setCount(countString);
-
+                                    if(nameList.contains(deckArrayList.get(i).getDeckName()) == false){
+                                        nameList.add(d);
                                     }
-                                    setListview(nameList);
+
+                                    deckArrayList.get(i).setCount(countString);
+
+
+
+                                    i++;
+
                                 }
+                                setListview(nameList);
                             }
 
                             @Override
@@ -124,6 +115,8 @@ public class ListDecks extends AppCompatActivity implements  View.OnClickListene
                     else{
                         //no decks
                     }
+
+
 
                 }
             }

@@ -63,6 +63,7 @@ public class FrontOfCard extends AppCompatActivity implements View.OnClickListen
         if (b != null) {
 
             deckAL = (ArrayList<Deck>) b.getSerializable("list");
+            //how many cards inside the deck
             count = (int) b.getSerializable("count");
             userId = (String) b.getSerializable("userId");
 
